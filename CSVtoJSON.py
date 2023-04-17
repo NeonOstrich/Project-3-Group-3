@@ -2,7 +2,7 @@ import csv
 import json
 
 # Open CSV file for reading
-with open('InfantMortalityRate.csv', 'r') as csv_file:
+with open('Project 3\static\js\InfantMortalityRate.csv', 'r') as csv_file:
     # Create a CSV reader
     csv_reader = csv.DictReader(csv_file)
     
