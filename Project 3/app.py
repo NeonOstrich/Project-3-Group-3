@@ -9,7 +9,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+    conn = engine.connect()
+    df = pd.read_sql('Select * From infant_mortality', conn)
+    data2 = df.to_dict(orient="records")
     return render_template('index.html')
+    # return render_template('index.html', data2 = data2)
 
 
 
